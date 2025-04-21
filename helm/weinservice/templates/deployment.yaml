@@ -27,7 +27,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "weinservice.serviceAccountName" . }}
+      #serviceAccountName: {{ include "weinservice.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -42,11 +42,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /weins
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
