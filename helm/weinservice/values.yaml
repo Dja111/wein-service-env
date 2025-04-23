@@ -8,7 +8,7 @@ image:
   repository: dja111/wein-service
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 52a37e87d89069b76e3723e6da1224a7ed65ca3e
+  tag: 8d6c68e5601bee93adeced12239daa9d948e98dc
 
 imagePullSecrets: []
 nameOverride: ""
