@@ -16,7 +16,7 @@ fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
-  create: true
+  create: false
   # Automatically mount a ServiceAccount's API credentials?
   automount: true
   # Annotations to add to the service account
@@ -42,7 +42,7 @@ securityContext:
 service:
   type: NodePort
   port: 2020
-  nodePort: 30001
+  nodePort: 31389
 
 ingress:
   enabled: false
