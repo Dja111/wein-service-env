@@ -44,6 +44,10 @@ service:
   port: 2020
   nodePort: 31389
 
+serviceMonitor:
+  name: weinservice-monitor
+  release: prometheus
+
 ingress:
   enabled: true
   className: ""
