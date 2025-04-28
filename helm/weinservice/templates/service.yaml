@@ -26,7 +26,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: {{ include "weinservice.fullname" . }}
+      {{- include "weinservice.selectorLabels" . | nindent 6 }}
+      #app: {{ include "weinservice.fullname" . }}
   endpoints:
     - port: http
       path: /actuator/prometheus
